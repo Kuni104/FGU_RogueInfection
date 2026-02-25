@@ -1,9 +1,10 @@
 using UnityEngine;
 
+[System.Serializable]
 public class TestGameData
 {
-    public int id {  get; set; }
-    public string username { get; set; }
-    public string password { get; set; }
-    public int score { get; set; }
+    public int id;
+    public string username;
+    public string password;
+    public int score;
 }

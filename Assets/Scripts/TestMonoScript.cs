@@ -4,16 +4,15 @@ public class TestMonoScript : MonoBehaviour
 {
     void Start()
     {
-        TestGameData gameData = new TestGameData();
-        gameData.id = 1;
-        gameData.username = "username";
-        gameData.password = "password";
-        gameData.score = 1;
+        TestGameData gameData = new TestGameData
+        {
+            id = 1,
+            username = "test",
+            password = "test",
+            score = 1,
+        };
 
-        TestApiScript.CreateAccount(gameData,
-        onSuccess: () => Debug.Log("Saved!"),
-        onError: (e) => Debug.LogError("Save failed: " + e)
-        );
+        TestApiScript.Instance.CreateAccount(gameData);
     }
 
     // Update is called once per frame
